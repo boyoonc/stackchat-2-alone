@@ -1,5 +1,5 @@
 import axios from 'axios';
-import socket from './socket';
+import socket from '../socket';
 
 
 
@@ -55,12 +55,15 @@ function channelsReducer (state = [], action) {
   switch (action.type) {
 
     case GET_CHANNELS:
-      return {
-        ...state,
-        channels: action.channels
-      };
+      console.log('get channels', action.channels)
+      // return {
+      //   ...state,
+      //   channels: action.channels
+      // };
+      return action.channels
 
     case GET_CHANNEL:
+      console.log('get channel', action.channels, action.channel)
       return{
         ...state, channels:[...state.channels, action.channel]
       }

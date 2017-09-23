@@ -64,12 +64,13 @@
 import React, { Component } from "react";
 import Message from "./Message";
 import NewMessageEntry from "./NewMessageEntry";
-import store from "../store";
+// import store from "../store";
 import { connect } from "react-redux";
 
 function Messages(props) {
+  const {messages} = props
   const channelId = Number(props.channelId); // because it's a string "1", not a number!
-  const filteredMessages = props.messages.filter(
+  const filteredMessages = messages.filter(
     message => message.channelId === channelId
   );
   return (

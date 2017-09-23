@@ -8,12 +8,12 @@ import channels from './channels'
 import name from './name'
 import newChannelEntry from './newChannelEntry'
 import newMessageEntry from './newMessageEntry'
-import currentChannel from './currentChannel'
+// import currentChannel from './currentChannel'
 
 // REDUCER
 
 const reducer = combineReducers(
-	{messages, channels, name, newChannelEntry, newMessageEntry, currentChannelEntry}
+	{messages, channels, name, newChannelEntry, newMessageEntry}
 	)
 
 const store = createStore( //i think this was always there with just redux
@@ -31,4 +31,4 @@ export * from './channels'
 export * from './name'
 export * from './newChannelEntry'
 export * from './newMessageEntry'
-export * from './currentChannel'
+// export * from './currentChannel'

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import socket from './socket';
+import socket from '../socket';
 
 
 // ACTION TYPES
@@ -19,10 +19,9 @@ function newChannelReducer (state = '', action) {
 
   switch (action.type) {
 
-    case UPDATE_NAME:
+    case WRITE_CHANNEL:
       return {
-        ...state,
-        name: action.channelName
+        ...state, newChannel: action.channel
       };
 
     default:
